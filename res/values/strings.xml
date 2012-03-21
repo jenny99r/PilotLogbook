@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, PilotLogActivity!</string>
+    <string name="app_name">PilotLog</string>
+    <string name="FromAirfield">From</string>
+    <string name="ToAirfield">To</string>
+
+</resources>
