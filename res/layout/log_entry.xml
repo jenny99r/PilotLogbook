@@ -85,11 +85,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/breaksOffTime" />
+
+            <TextView
+                android:id="@+id/breaksOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
         </TableRow>
-
+
         <TableRow
-            android:id="@+id/tableRow5"
+            android:id="@+id/tableRowBreaksOn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
@@ -100,6 +106,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/breaksOnTime" />
+
+            <TextView
+                android:id="@+id/breaksOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
         </TableRow>
 
