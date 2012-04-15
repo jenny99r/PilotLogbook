@@ -27,7 +27,9 @@
                 android:id="@+id/fromAirfield"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                 />
+            <requestFocus />
         </TableRow>
 
         <TableRow
@@ -48,8 +50,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:editable="false"
-                android:text="hello"
                 android:gravity="top" />
 
         </TableRow>
@@ -66,13 +66,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/On" />
-
-            <TextView
+
+            <EditText
                 android:id="@+id/flightDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="TextView" />
+                android:editable="false"
+                android:layout_weight="1"
+                >
+
+            </EditText>
 
         </TableRow>
 
@@ -90,12 +93,12 @@
                 android:layout_marginRight="5dip"
                 android:text="@string/breaksOffTime" />
 
-            <TextView
+            <EditText
                 android:id="@+id/breaksOff"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="TextView" />
+                android:layout_height="wrap_content" 
+                android:editable="false"
+                android:layout_weight="1"/>
 
         </TableRow>
 
@@ -112,12 +115,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/breaksOnTime" />
 
-            <TextView
+            <EditText
                 android:id="@+id/breaksOn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="TextView" />
+                android:editable="false"
+                android:layout_weight="1"
+                />
 
         </TableRow>
 
@@ -133,6 +137,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aircraftReg" />
+
+            <EditText
+                android:id="@+id/aircraftReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_weight="1">
+
+                
+            </EditText>
 
         </TableRow>
 

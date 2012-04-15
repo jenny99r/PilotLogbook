@@ -97,7 +97,24 @@ public class PilotLogActivity extends Activity {
         return null;
     }
     
-   
+    @Override
+    protected void onPrepareDialog(int id, Dialog dialog) {
+    	switch (id) {
+    	case DATE_DIALOG_ID:
+    		DateExtracter dateExtracter = new DateExtracter(dateDisplay.getText().toString());
+    		((DatePickerDialog) dialog).updateDate(dateExtracter.getYear(), dateExtracter.getMonth(), dateExtracter.getDay());
+    		break;
+    	case BREAKS_OFF_TIME_DIALOG_ID:
+    		TimeExtracter timeExtracter = new TimeExtracter(breaksOffDisplay.getText().toString());
+    		((TimePickerDialog) dialog).updateTime(timeExtracter.getHour(), timeExtracter.getMinute());
+    		break;
+    	case BREAKS_ON_TIME_DIALOG_ID:
+    		TimeExtracter breaksOnTimeExtracter = new TimeExtracter(breaksOnDisplay.getText().toString());
+    		((TimePickerDialog) dialog).updateTime(breaksOnTimeExtracter.getHour(), breaksOnTimeExtracter.getMinute());
+    		break;
+    	}
+		
+	}
     
     private class TimePickerListener implements TimePickerDialog.OnTimeSetListener {
 		
