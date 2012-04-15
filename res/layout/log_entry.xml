@@ -48,6 +48,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:editable="false"
+                android:text="hello"
                 android:gravity="top" />
 
         </TableRow>
@@ -69,6 +71,7 @@
                 android:id="@+id/flightDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
                 android:text="TextView" />
 
         </TableRow>
@@ -79,17 +82,19 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
             android:layout_marginTop="10dip" >
-
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
                 android:text="@string/breaksOffTime" />
 
             <TextView
                 android:id="@+id/breaksOff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
                 android:text="TextView" />
 
         </TableRow>
@@ -111,6 +116,7 @@
                 android:id="@+id/breaksOn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
                 android:text="TextView" />
 
         </TableRow>
