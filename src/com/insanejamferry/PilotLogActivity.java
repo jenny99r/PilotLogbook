@@ -72,30 +72,27 @@ public class PilotLogActivity extends Activity {
     }
     
     private void updateFlightDateDisplay(int day, int month, int year) {
-    	dateDisplay.setText(
-    			new StringBuilder()
-    				// Month is 0 based so add 1
-    				.append(day).append("-")
-    				.append(month + 1).append("-")
-    				.append(year).append(" "));
-
+    	dateDisplay.setText(new DateExtracter(day, month, year).getDate());
     }
     
     private void updateTimeDisplay(TextView textView, int hour, int minute) {
-    	textView.setText(new StringBuilder().append(hour).append(":").append(minute));
+    	textView.setText(new TimeExtracter(hour, minute).getTime());
     }
     
     @Override
     protected Dialog onCreateDialog(int id) {
         switch (id) {
         case DATE_DIALOG_ID:
+        	DateExtracter dateExtracter = new DateExtracter(dateDisplay.getText().toString());
             return new DatePickerDialog(this,
                         dateSetListener,
-                        2012, 3, 12);
-//        case BREAKS_OFF_TIME_DIALOG_ID: 
-//        	return new TimePickerDialog(this, new TimePickerListener(breaksOffDisplay), 10, 15, true);
-//        case BREAKS_ON_TIME_DIALOG_ID: 
-//        	return new TimePickerDialog(this, new TimePickerListener(breaksOnDisplay), 10, 15, true);
+                        dateExtracter.getYear(), dateExtracter.getMonth(), dateExtracter.getDay());
+        case BREAKS_OFF_TIME_DIALOG_ID: 
+        	TimeExtracter timeExtracter = new TimeExtracter(breaksOffDisplay.getText().toString());
+        	return new TimePickerDialog(this, new TimePickerListener(breaksOffDisplay), timeExtracter.getHour(), timeExtracter.getMinute(), true);
+        case BREAKS_ON_TIME_DIALOG_ID: 
+        	TimeExtracter breaksOntimeExtracter = new TimeExtracter(breaksOnDisplay.getText().toString());
+        	return new TimePickerDialog(this, new TimePickerListener(breaksOnDisplay), breaksOntimeExtracter.getHour(), breaksOntimeExtracter.getMinute(), true);
         }
         return null;
     }

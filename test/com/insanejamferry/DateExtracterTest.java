@@ -1,7 +1,6 @@
 package com.insanejamferry;
 
 import static org.junit.Assert.*;
-import junit.framework.TestCase;
 
 import org.hamcrest.core.Is;
 import org.junit.Test;

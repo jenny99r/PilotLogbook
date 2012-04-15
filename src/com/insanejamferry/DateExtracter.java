@@ -9,11 +9,14 @@ public class DateExtracter {
 	private final int year;
 	
 	public DateExtracter(String date) {
-		String[] dateSplit = date.split("" + SEPERATOR);
-		day = Integer.valueOf(dateSplit[0]);
-		month = Integer.valueOf(dateSplit[1]);
-		year = Integer.valueOf(dateSplit[2]);
-}
+		this(date.split("" + SEPERATOR));
+	}
+	
+	private DateExtracter(String [] dateSplit) {
+		this(Integer.valueOf(dateSplit[0]),
+		     Integer.valueOf(dateSplit[1]),
+		     Integer.valueOf(dateSplit[2]));
+	}
 	
 	public DateExtracter(int day, int month, int year) {
 		this.day = day;
