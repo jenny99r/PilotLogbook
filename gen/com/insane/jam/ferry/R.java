@@ -19,6 +19,7 @@ public final class R {
         public static final int breaksOn=0x7f05000f;
         public static final int flightDate=0x7f050009;
         public static final int fromAirfield=0x7f050003;
+        public static final int save=0x7f050013;
         public static final int tableLayout1=0x7f050000;
         public static final int tableRow1=0x7f050004;
         public static final int tableRow2=0x7f050001;
@@ -47,5 +48,6 @@ public final class R {
         public static final int breaksOffTime=0x7f040005;
         public static final int breaksOnTime=0x7f040006;
         public static final int hello=0x7f040000;
+        public static final int save=0x7f040008;
     }
 }

@@ -3,6 +3,8 @@ package com.insanejamferry;
 import java.util.Calendar;
 
 import com.insane.jam.ferry.R;
+import com.insanejamferry.db.LogBookData;
+import com.insanejamferry.db.PilotLogDatabaseHelper;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -11,11 +13,12 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class PilotLogActivity extends Activity {
+public class LogBookEntryActivity extends Activity {
 	private TextView dateDisplay;
 	private TextView breaksOffDisplay;
 	private TextView breaksOnDisplay;
@@ -23,6 +26,8 @@ public class PilotLogActivity extends Activity {
 	private static final int DATE_DIALOG_ID = 0;
 	private static final int BREAKS_OFF_TIME_DIALOG_ID = 1;
 	private static final int BREAKS_ON_TIME_DIALOG_ID = 2;
+	
+	private PilotLogDatabaseHelper databaseHelper = new PilotLogDatabaseHelper(this);
 	
 	private DatePickerDialog.OnDateSetListener dateSetListener =
             new DatePickerDialog.OnDateSetListener() {
@@ -57,6 +62,9 @@ public class PilotLogActivity extends Activity {
         
         updateTimeDisplay(breaksOffDisplay, hour, minute);
         updateTimeDisplay(breaksOnDisplay, hour, minute);
+        
+        Button saveButton = (Button) findViewById(R.id.save);
+        saveButton.setOnClickListener(new SaveLogBookEntry(this, new LogBookData(databaseHelper)));
         
     }
     

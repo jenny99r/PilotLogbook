@@ -9,5 +9,6 @@
     <string name="breaksOffTime">Breaks Off</string>
     <string name="breaksOnTime">Breaks On</string>
     <string name="aircraftReg">Reg</string>
+    <string name="save">Save</string>
 
 </resources>
