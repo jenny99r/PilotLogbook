@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dip" >
 
-    <TextView
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="25dip"
+	    android:text="@string/pilotlog"
+	    android:textSize="24.5sp" />
+
+    <Button
+        android:id="@+id/viewLogEntries"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:text="@string/viewLog" />
+
+    <Button
+        android:id="@+id/createLogEntry"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dip"
+        android:text="@string/createLog" />
 
 </LinearLayout>
