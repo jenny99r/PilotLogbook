@@ -10,5 +10,8 @@
     <string name="breaksOnTime">Breaks On</string>
     <string name="aircraftReg">Reg</string>
     <string name="save">Save</string>
+    <string name="viewLog">View Log Entries</string>
+    <string name="createLog">Create New Log Entry</string>
+    <string name="pilotlog">Pilot Log</string>
 
 </resources>
