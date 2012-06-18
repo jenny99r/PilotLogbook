@@ -49,7 +49,7 @@ public class LogBookEntryActivity extends Activity {
         dateDisplay.setOnTouchListener(createOnTouchListenerForDialog(DATE_DIALOG_ID));
         
         final Calendar c = Calendar.getInstance();      
-        updateFlightDateDisplay(c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH), c.get(Calendar.YEAR));
+        updateFlightDateDisplay(c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH) + 1, c.get(Calendar.YEAR));
         
         breaksOffDisplay = (TextView) findViewById(R.id.breaksOff);
         breaksOnDisplay = (TextView) findViewById(R.id.breaksOn);
@@ -60,7 +60,7 @@ public class LogBookEntryActivity extends Activity {
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
         
-        updateTimeDisplay(breaksOffDisplay, hour, minute);
+        updateTimeDisplay(breaksOffDisplay, hour - 1, minute);
         updateTimeDisplay(breaksOnDisplay, hour, minute);
         
         Button saveButton = (Button) findViewById(R.id.save);
